@@ -1406,10 +1406,6 @@ private:
     std::string _filename;
     std::atomic<bool> _migrateMsgReceived = false;
 
-    /// The WopiFileInfo of the initial request loading the document for the first time.
-    /// This has a single-use, and then it's reset.
-    std::unique_ptr<WopiStorage::WOPIFileInfo> _initialWopiFileInfo;
-
     /// The state of the document.
     /// This regulates all other primary operations.
     class DocumentState final
