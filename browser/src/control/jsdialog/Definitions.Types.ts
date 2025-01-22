@@ -68,6 +68,9 @@ type JSDialogCallback = (
 	builder: any,
 ) => void;
 
+// callback triggered for custom rendered entries
+type CustomEntryRenderCallback = (pos: number | string) => void;
+
 // used to define menus
 type MenuDefinition = {
 	id: string; // unique identifier
