@@ -168,6 +168,10 @@ class Tile {
 	hasPendingUpdate(): boolean {
 		return this.hasPendingDelta > 0 || this.hasPendingKeyframe > 0;
 	}
+
+	isReadyToDraw(): boolean {
+		return !!this.imgDataCache;
+	}
 }
 
 class TileManager {
